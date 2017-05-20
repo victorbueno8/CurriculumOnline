@@ -1,0 +1,32 @@
+body {
+  padding-top: 50px;
+}
+
+.navbar-default{
+  background-color: #ff9933;
+}
+
+.navbar-brand{
+  color: #fff;
+  padding: 12px;
+}
+
+.navbar-toggle {
+  margin-left: 10px;
+}
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
