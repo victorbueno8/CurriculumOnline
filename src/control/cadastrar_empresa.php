@@ -3,7 +3,7 @@
 
   if(isset($_POST['submit'])) {
     $udao = new UsuarioDAO();
-    $usuario = new Usuario($_POST['email'],$_POST['senha'],$_POST['perfil']);
+    $usuario = new Usuario($_POST['email'],md5($_POST['senha']),$_POST['perfil']);
   	$udao->insertUsuario($usuario);
 
     $edao = new EmpresaDAO();

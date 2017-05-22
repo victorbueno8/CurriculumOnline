@@ -1,11 +1,6 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
 include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Idioma.php");
-//    $teste = new IdiomaDAO();
-//    $user = new Idioma("vihto","teste","teste");
-//    $teste->insertIdioma($user);
-//    $person = $teste->selectIdioma("vihto");
-//    var_dump($person);
 
   class IdiomaDAO{
 
@@ -13,7 +8,7 @@ include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Idioma.php");
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "INSERT INTO Idioma(email,idioma,nivel) VALUES('{$idioma->getEmail()}','{$idioma->getIdioma()}','{$idioma->getNivel()}');";
+			$quary = "INSERT INTO idioma(email,idioma,nivel) VALUES('{$idioma->getEmail()}','{$idioma->getIdioma()}','{$idioma->getNivel()}');";
 
       if(!mysqli_query($con,$quary)){
 				echo "Erro ao cadastrar idiomas: " . mysqli_error($con);

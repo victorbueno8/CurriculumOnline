@@ -59,7 +59,7 @@
       $con = $conexao->abrirConexao();
 
 			$list = array();
-			$quary = "SELECT * FROM Empresa_contato;";
+			$quary = "SELECT * FROM empresa_contato;";
 			$result = mysqli_query($con,$quary);
 
 			while($content = mysqli_fetch_array($result)){

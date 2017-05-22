@@ -2,9 +2,6 @@
   include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
   include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Usuario.php");
 
-//  $teste = new UsuarioDAO();
-//  $user = new Usuario("vihto","123","candidato");
-//  if(UsuarioDAO::verificaUsuario("vihto@hotmail.com","123")) echo "ok";
   class UsuarioDAO{
 
     function insertUsuario($usuario){

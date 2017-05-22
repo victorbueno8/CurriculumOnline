@@ -22,7 +22,7 @@
       $con = $conexao->abrirConexao();
 
 			$quary = "UPDATE info_pessoal SET nomeCompleto = '{$info_pessoal->getNomeCompleto()}',idade= {$info_pessoal->getIdade()},sexo = '{$info_pessoal->getSexo()}',estadoCivil = '{$info_pessoal->getEstadoCivil()}',nacionalidade = '{$info_pessoal->getNacionalidade()}',objetivo = '{$info_pessoal->getObjetivo()}',endereco = '{$info_pessoal->getEndereco()}',cidade = '{$info_pessoal->getCidade()}',estado = '{$info_pessoal->getEstado()}',telefone = '{$info_pessoal->getTelefone()}',info_adicional = '{$info_pessoal->getInfo_adicional()}' WHERE email = '{$info_pessoal->getEmail()}';";
-      mysqli_query($con,$quary) or die ("Erro ao deletar formações: " . mysqli_error($con));
+      mysqli_query($con,$quary) or die ("Erro ao atualizar dados: " . mysqli_error($con));
 
 			mysqli_close($con);
 		}
@@ -31,7 +31,7 @@
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "SELECT * FROM Info_pessoal WHERE email like '{$email}';";
+			$quary = "SELECT * FROM info_pessoal WHERE email like '{$email}';";
 			$result = mysqli_query($con,$quary);
 
       $content = mysqli_fetch_array($result);
@@ -47,7 +47,7 @@
       $con = $conexao->abrirConexao();
 
 			$list = array();
-			$quary = "SELECT * FROM Info_pessoal WHERE nomeCompleto like '%{$busca}%' or objetivo like '%{$busca}%';";
+			$quary = "SELECT * FROM info_pessoal WHERE nomeCompleto like '%{$busca}%' or objetivo like '%{$busca}%';";
 			$result = mysqli_query($con,$quary);
 
 			while($content = mysqli_fetch_array($result)){

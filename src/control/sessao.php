@@ -4,7 +4,7 @@
   session_start();
   // as variáveis login e senha recebem os dados digitados na página anterior
   $email = $_POST['email'];
-  $senha = $_POST['senha'];
+  $senha = md5($_POST['senha']);
 
   $user = new UsuarioDAO();
   $verif = $user->verificaUsuario($email,$senha);

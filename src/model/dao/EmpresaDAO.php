@@ -8,7 +8,7 @@
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "INSERT INTO Empresa(email,razao_social,nome_fantasia,cnpj,responsavel,endereco,bairro, cidade,estado,segmento,atividade,porte,info_gerais) VALUES('{$empresa->getEmail()}','{$empresa->getRazao_social()}','{$empresa->getNome_fantasia()}','{$empresa->getCnpj()}','{$empresa->getResponsavel()}','{$empresa->getEndereco()}','{$empresa->getBairro()}','{$empresa->getCidade()}','{$empresa->getEstado()}','{$empresa->getSegmento()}','{$empresa->getAtividade()}','{$empresa->getPorte()}','{$empresa->getInfo_gerais()}');";
+			$quary = "INSERT INTO empresa(email,razao_social,nome_fantasia,cnpj,responsavel,endereco,bairro, cidade,estado,segmento,atividade,porte,info_gerais) VALUES('{$empresa->getEmail()}','{$empresa->getRazao_social()}','{$empresa->getNome_fantasia()}','{$empresa->getCnpj()}','{$empresa->getResponsavel()}','{$empresa->getEndereco()}','{$empresa->getBairro()}','{$empresa->getCidade()}','{$empresa->getEstado()}','{$empresa->getSegmento()}','{$empresa->getAtividade()}','{$empresa->getPorte()}','{$empresa->getInfo_gerais()}');";
       echo $quary;
 			if(!mysqli_query($con,$quary)){
 				echo "Erro ao cadastrar informações pessoais: " . mysqli_error($con);
@@ -31,7 +31,7 @@
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "SELECT * FROM Empresa WHERE email like '{$email}';";
+			$quary = "SELECT * FROM empresa WHERE email like '{$email}';";
 			$result = mysqli_query($con,$quary);
 
       $content = mysqli_fetch_array($result);
@@ -47,7 +47,7 @@
       $con = $conexao->abrirConexao();
 
 			$list = array();
-			$quary = "SELECT * FROM Empresa WHERE {$campo} like '%{$valor}%';";
+			$quary = "SELECT * FROM empresa WHERE {$campo} like '%{$valor}%';";
 
 			$result = mysqli_query($con,$quary);
 

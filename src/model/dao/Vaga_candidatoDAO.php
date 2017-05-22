@@ -8,7 +8,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candida
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "INSERT INTO Vaga_candidato(vaga_numero,vaga_empresa,candidato_email,data,status) VALUES('{$vaga->getVaga_numero()}','{$vaga->getVaga_empresa()}','{$vaga->getCandidato_email()}',NOW(),'{$vaga->getStatus()}');";
+			$quary = "INSERT INTO vaga_candidato(vaga_numero,vaga_empresa,candidato_email,data,status) VALUES('{$vaga->getVaga_numero()}','{$vaga->getVaga_empresa()}','{$vaga->getCandidato_email()}',NOW(),'{$vaga->getStatus()}');";
 
       if(!mysqli_query($con,$quary)){
 				echo "Erro ao cadastrar formações: " . mysqli_error($con);
@@ -21,7 +21,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candida
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "UPDATE Vaga_candidato SET status = '{$vaga->getStatus()}' WHERE candidato_email = '{$vaga->getCandidato_email()->getEmail()}';";
+			$quary = "UPDATE vaga_candidato SET status = '{$vaga->getStatus()}' WHERE candidato_email = '{$vaga->getCandidato_email()->getEmail()}';";
       mysqli_query($con,$quary) or die ("Erro ao deletar formações: " . mysqli_error($con));
 
 			mysqli_close($con);
@@ -31,7 +31,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candida
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-      $quary = "SELECT * FROM Vaga_candidato WHERE id = {$id}";
+      $quary = "SELECT * FROM vaga_candidato WHERE id = {$id}";
 			$result = mysqli_query($con,$quary);
 
       $content = mysqli_fetch_array($result);
@@ -56,7 +56,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candida
       $con = $conexao->abrirConexao();
 
 			$vagas = array();
-			$quary = "SELECT * FROM Vaga_candidato WHERE candidato_email like '{$email}' XOR vaga_empresa like '{$email}';";
+			$quary = "SELECT * FROM vaga_candidato WHERE candidato_email like '{$email}' XOR vaga_empresa like '{$email}';";
 			$result = mysqli_query($con,$quary);
 
 
@@ -84,8 +84,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candida
       $con = $conexao->abrirConexao();
 
 			$vagas = array();
-			$quary = "SELECT * FROM Vaga_candidato WHERE {$campo} like '{$valor}';";
-      
+			$quary = "SELECT * FROM vaga_candidato WHERE {$campo} like '{$valor}';";
+
 			$result = mysqli_query($con,$quary);
 
 

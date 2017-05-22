@@ -9,7 +9,7 @@ include_once "EmpresaDAO.php";
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "INSERT INTO Vaga(email,area,vaga,descricao,quantidade,data,salario) VALUES('{$vaga->getEmail()}','{$vaga->getArea()}','{$vaga->getVaga()}','{$vaga->getDescricao()}',{$vaga->getQuantidade()},NOW(),{$vaga->getSalario()});";
+			$quary = "INSERT INTO vaga(email,area,vaga,descricao,quantidade,data,salario) VALUES('{$vaga->getEmail()}','{$vaga->getArea()}','{$vaga->getVaga()}','{$vaga->getDescricao()}',{$vaga->getQuantidade()},NOW(),{$vaga->getSalario()});";
 
       if(!mysqli_query($con,$quary)){
 				echo "Erro ao cadastrar formações: " . mysqli_error($con);
@@ -22,7 +22,7 @@ include_once "EmpresaDAO.php";
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "UPDATE Vaga SET area = '{$vaga->getArea()}',vaga = '{$vaga->getVaga()}',descricao = '{$vaga->getDescricao()}',quantidade = {$vaga->getQuantidade()},salario = {$vaga->getSalario()} WHERE numero = {$vaga->getNumero()};";
+			$quary = "UPDATE vaga SET area = '{$vaga->getArea()}',vaga = '{$vaga->getVaga()}',descricao = '{$vaga->getDescricao()}',quantidade = {$vaga->getQuantidade()},salario = {$vaga->getSalario()} WHERE numero = {$vaga->getNumero()};";
       mysqli_query($con,$quary) or die ("Erro ao deletar formações: " . mysqli_error($con));
 
 			mysqli_close($con);
@@ -32,7 +32,7 @@ include_once "EmpresaDAO.php";
       $conexao = new Conexao();
       $con = $conexao->abrirConexao();
 
-			$quary = "SELECT * FROM Vaga WHERE numero = {$numero};";
+			$quary = "SELECT * FROM vaga WHERE numero = {$numero};";
 			$result = mysqli_query($con,$quary);
 
       $content = mysqli_fetch_array($result);
@@ -52,7 +52,7 @@ include_once "EmpresaDAO.php";
       $con = $conexao->abrirConexao();
 
 			$vagas = array();
-			$quary = "SELECT * FROM Vaga WHERE email like '{$email}';";
+			$quary = "SELECT * FROM vaga WHERE email like '{$email}';";
 			$result = mysqli_query($con,$quary);
 
 
@@ -75,7 +75,7 @@ include_once "EmpresaDAO.php";
       $con = $conexao->abrirConexao();
 
 			$vagas = array();
-			$quary = "SELECT * FROM Vaga WHERE {$campo} like '%{$valor}%';";
+			$quary = "SELECT * FROM vaga WHERE {$campo} like '%{$valor}%';";
 
 			$result = mysqli_query($con,$quary);
 

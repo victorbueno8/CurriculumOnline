@@ -1,11 +1,6 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
 include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Curso_complementar.php");
-//    $teste = new Curso_complementarDAO();
-//    $user = new Curso_complementar("vihto","testwee",20);
-//    $teste->insertCurso($user);
-//    $person = $teste->selectCurso("vihto");
-//    var_dump($person[0]);
 
   class Curso_complementarDAO{
 
