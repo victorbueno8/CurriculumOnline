@@ -29,7 +29,7 @@
         <span class="glyphicon glyphicon-pencil"></span> Atualizar Vaga
       </button>
       <button type="submit" class="btn btn-danger btn-file" name="delete">
-        <span class="glyphicon glyphicon-trash"></span> Inativar Vaga
+        <span class="glyphicon glyphicon-trash"></span> Remover
       </button>
 		</form>
   </div>

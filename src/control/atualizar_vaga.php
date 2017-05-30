@@ -8,13 +8,14 @@ $vaga = new Vaga($_SESSION['email'],$_POST['area'],$_POST['vaga'],$_POST['descri
 $vaga->setNumero($_POST['numero']);
 
 if(isset($_POST['delete'])){
-
+  inativarVaga($vaga);
 } else if(isset($_POST['update'])){
   updateVaga($vaga);
 }
 
 function inativarVaga($vaga){
-  
+  $dao = new VagaDAO();
+  $dao->deleteVaga($vaga);
 }
 
 function updateVaga($vaga){
