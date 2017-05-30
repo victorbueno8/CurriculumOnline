@@ -1,6 +1,8 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga_candidato.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/model/Vaga_candidato.php");
+include_once("VagaDAO.php");
+include_once("Info_pessoalDAO.php");
 
   class Vaga_candidatoDAO{
 

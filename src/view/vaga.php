@@ -52,14 +52,14 @@
 			      </tr>
 			    </thead>
 			    <tbody>
-			      <?php foreach($currs as $i => $curr){?>
+			      <?php foreach($currs as $i => $curr){ if($curr->getStatus() == "selecionado"){?>
 			      <tr>
 			        <td><?php echo $curr->getCandidato_email()->getNomeCompleto();?></td>
 			        <td><?php echo $curr->getCandidato_email()->getEmail();?></td>
 							<td><?php echo $curr->getStatus();?></td>
 			        <td><a href="?content=4&perfil=<?php echo $curr->getCandidato_email()->getEmail();?>&id=<?php echo $curr->getId();?>">Ver Curriculo</a></td>
 			      </tr>
-			      <?php }?>
+			      <?php } }?>
 			    </tbody>
 			  </table>
 			</div>
@@ -82,14 +82,13 @@
 			      </tr>
 			    </thead>
 			    <tbody>
-			      <?php foreach($currs as $i => $curr){?>
+			      <?php foreach($currs as $i => $curr){ if($curr->getStatus() == "solicitado"){?>
 			      <tr>
 			        <td><?php echo $curr->getCandidato_email()->getNomeCompleto();?></td>
 			        <td><?php echo $curr->getCandidato_email()->getEmail();?></td>
-							<td><?php echo $curr->getStatus();?></td>
 			        <td><a href="?content=4&perfil=<?php echo $curr->getCandidato_email()->getEmail();?>&id=<?php echo $curr->getId();?>">Ver Curriculo</a></td>
 			      </tr>
-			      <?php }?>
+			      <?php } }?>
 			    </tbody>
 			  </table>
 			</div>

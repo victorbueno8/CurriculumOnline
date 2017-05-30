@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Formacao.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+include($_SERVER['DOCUMENT_ROOT']."/src/model/Formacao.php");
 //    $teste = new FormacaoDAO();
 //    $user = new Formacao("vihto","123","wer","conclu",5);
 //    $teste->insertFormacao($user);

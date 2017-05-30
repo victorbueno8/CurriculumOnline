@@ -1,5 +1,5 @@
 <?php
-	include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Curriculo.php");
+	include($_SERVER['DOCUMENT_ROOT']."/src/model/Curriculo.php");
 
 	if(isset($_GET['perfil'])){
 		$curriculo = new Curriculo($_GET['perfil']);

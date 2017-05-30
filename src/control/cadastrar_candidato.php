@@ -44,7 +44,7 @@
   	}
 
 //    $file_ext=strtolower(end(explode('.',$_FILES['foto']['name'])));
-    $imagedir = $_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/images/uploaded/".$_POST['email'].".png";
+    $imagedir = $_SERVER['DOCUMENT_ROOT']."/images/uploaded/".$_POST['email'].".png";
     move_uploaded_file($_FILES['foto']['tmp_name'], $imagedir);
 
   	header('location:../../index.php?resp=succeful');

@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Experiencia.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+include($_SERVER['DOCUMENT_ROOT']."/src/model/Experiencia.php");
     $teste = new ExperienciaDAO();
 //    $user = new Experiencia("vihto","123","wer",3,5);
 //    $teste->insertExperiencia($user);

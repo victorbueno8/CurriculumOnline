@@ -1,6 +1,6 @@
 <?php
-  include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-  include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Info_pessoal.php");
+  include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+  include($_SERVER['DOCUMENT_ROOT']."/src/model/Info_pessoal.php");
 
   class Info_pessoalDAO{
 

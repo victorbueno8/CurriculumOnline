@@ -10,12 +10,7 @@
   <div class="jumbotron">
     <div class="col-lg-3">
       <a class="thumbnail" style="width: 200px; height: 200px;">
-        <?php if(file_exists("images/uploaded/".$empresa->getEmail().".png")){
-          echo '<img src="images/uploaded/'.$empresa->getEmail().'.png">';
-        } else {
-          echo '<img src="images/avatar_placeholder.png">';
-        }
-        ?>
+        <img src="<?php echo $empresa->getAvatarUrl(); ?>" style="width: 200px; height: 190px;">
       </a>
     </div>
     <h3><?php echo $empresa->getNome_fantasia();?></h3>

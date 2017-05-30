@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/signin.css">
+		<link rel="icon" href="images/logo-dark.png">
 	</head>
 	<body>
 		<?php include "src/view/navbar.php"; ?>
@@ -42,6 +43,14 @@
 	      </form>
 				<a href="cadastro_conta.php"><label>Ainda não cadastrado?</label></a>
 			</div>
+
+			<?php if(isset($_GET['resp'])){
+				switch($_GET['resp']){
+					case 'succeful': echo '<div class="alert alert-success"><strong>Sucesso!</strong> Operação efetuada com sucesso.</div>'; break;
+					case 'erro': echo '<div class="alert alert-danger"><strong>Erro!</strong> Usuário ou senha inválidos.</div>'; break;
+					case 'sessionexpired': echo '<div class="alert alert-danger"><strong>Sessão expirada!</strong> Sua sessão foi expirada, faça o login novamente.</div>'; break;
+				}
+			}?>
 
 		</div>
 

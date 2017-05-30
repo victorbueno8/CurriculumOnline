@@ -7,6 +7,7 @@
 		<title>Curriculum Online</title>
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="icon" href="images/logo-dark.png">
 		<style>
 			.jumbotron{
 				width: 500px;

@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/addFileButton.css">
+		<link rel="icon" href="images/logo-dark.png">
 	</head>
 	<body>
 		<?php include "src/view/navbar.php"; ?>

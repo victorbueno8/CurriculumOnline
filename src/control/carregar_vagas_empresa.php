@@ -1,5 +1,8 @@
 <?php
-require_once "class-autoloader.php";
+//require_once "class-autoloader.php";
+include_once($_SERVER['DOCUMENT_ROOT']."/src/model/dao/EmpresaDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/model/dao/VagaDAO.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/model/dao/Vaga_candidatoDAO.php");
 
 function getVaga(){
   $edao = new EmpresaDAO();

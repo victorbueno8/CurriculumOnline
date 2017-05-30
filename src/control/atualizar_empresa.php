@@ -11,7 +11,7 @@ if(isset($_POST['submitUpdate'])){
 }
 
 function atualizar_dados_empresa(){
-  $imagedir = $_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/images/uploaded/".$_SESSION['email'].".png";
+  $imagedir = $_SERVER['DOCUMENT_ROOT']."/images/uploaded/".$_SESSION['email'].".png";
   move_uploaded_file($_FILES['foto']['tmp_name'], $imagedir);
 
   $edao = new EmpresaDAO();

@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/model/Vaga.php");
 include_once "EmpresaDAO.php";
 
   class VagaDAO{

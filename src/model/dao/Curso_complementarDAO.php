@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/util/Conexao.php");
-include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Curso_complementar.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/src/util/Conexao.php");
+include($_SERVER['DOCUMENT_ROOT']."/src/model/Curso_complementar.php");
 
   class Curso_complementarDAO{
 

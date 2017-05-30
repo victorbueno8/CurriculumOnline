@@ -1,6 +1,6 @@
 <?php
 require_once "class-autoloader.php";
-require $_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/Vaga.php";
+require $_SERVER['DOCUMENT_ROOT']."/src/model/Vaga.php";
 
 session_start();
 

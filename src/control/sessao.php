@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT']."/CurriculumOnline/src/model/dao/UsuarioDAO.php");
+  include($_SERVER['DOCUMENT_ROOT']."/src/model/dao/UsuarioDAO.php");
   // session_start inicia a sessão
   session_start();
   // as variáveis login e senha recebem os dados digitados na página anterior
